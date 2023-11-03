@@ -14,11 +14,11 @@ function App() {
 
     useEffect(() => {
          console.log(`Update component - numbers ${numbers.length}`)
-    }, [numbers, count]);  // count
+    }, [numbers]);  // count
 
     useEffect(() => {
         console.log(`Update component - count = ${count}`)
-   }, [count]);  // count
+   }, [count]);  
 
     useEffect(() => {
          setTimeout(() => setTimer(s => s + 1), 1000);
@@ -35,8 +35,10 @@ function App() {
             <StarwarsHero/>
             
             <h3>Count: {count}</h3>
+            <button onClick={() => setCount(c => c + 1)}>+</button>
+
             <h3>Timer: {timer}</h3>
-            
+
             <ul>
                 {numbers.map((number, index) => (
                     <li
@@ -50,8 +52,7 @@ function App() {
             </ul>
 
             <button style={{marginRight: '20px'}} onClick={onClick}>REMOVE</button>
-            <button onClick={() => setCount(c => c + 1)}>+</button>
-        </div>
+         </div>
     );
 }
 
