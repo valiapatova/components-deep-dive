@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import StarwarsHero from './components/StarwarsHero';
+//import Starwars from './Starwars';
 import styles from './App.module.css';
 
 function App() {
@@ -31,10 +32,11 @@ function App() {
 
     return (
         <div className={styles.app}>
-            <Starwars />
-
+            <StarwarsHero/>
+            
             <h3>Count: {count}</h3>
             <h3>Timer: {timer}</h3>
+            
             <ul>
                 {numbers.map((number, index) => (
                     <li
