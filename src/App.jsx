@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Starwars from './Starwars';
+import StarwarsHero from './components/StarwarsHero';
 import styles from './App.module.css';
 
 function App() {
